@@ -30,11 +30,11 @@ def sort_dates(dates):
     date_dict = {}
     for normal, iso in zip(dates, iso_list):
         date_dict[iso] = normal
-    
     sort1 = sorted(iso_list)
+    sort2 = []
     for day in sort1:
-        day = date_dict[day]
-    return sort1
+        val = date_dict[str(day)]
+        sort2.append(val)
+    return sort2
 
-dates_list = ['February 6, 1992', 'February 8, 1992', 'December 1, 1993', 'January 1, 1990']
-test1 = sort_dates(dates_list)
+
